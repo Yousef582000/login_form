@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100vh;
+    /* background-color: rgb(0, 0, 0); */
+    background: url(bg2.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 510px;
+    /* backdrop-filter:blure; */
+    /* background:#000; */
+    background: rgba(0, 0, 0, .4);
+
+border-radius: 20px;
+box-shadow: 0 0 20px #0ef;
+padding: 40px;
+overflow: hidden;
+
+
+}
+.container:hover{
+    animation: anmite 1s linear infinite;
+}
+@keyframes anmite {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.login-form{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+transition: 1s ease-in-out;
+}
+.container.active .login-form.login{
+    transform: translateY(-450px);
+
+}
+.container .login-form.signup{
+    position: absolute;
+    top: 450px;
+    left: 0;
+
+}
+.container.active .login-form.signup{
+    transform: translateY(-450px);
+}
+
+.login-form h1{
+    font-size: 32px;
+    color: #fff;
+   text-align: center;
+
+}
+.input-box{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left:5px;
+    transform: translateY(-50%);
+font-size: 16px;
+color: #fff;
+pointer-events: none;
+transition: .5s;
+}
+.input-box input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+outline: none;
+
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -8px;
+    color:#0ef
+}
+
+.remember{
+    margin: -5px 0 15px 5px;
+}
+.remember label{
+    color: #fff;
+    font-size: 18px;
+}
+.remember label input{
+    accent-color: #0ef;
+}
+.btn1{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-color: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size:16px ;
+    color:#000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+
+}
+.space{
+    margin-top: -10px;
+}
+.signup{
+    font-size: 16px;
+    text-align: center;
+    margin: 15px 0;
+}
+.signup p{
+    color:#ffffff;
+
+}
+.signup p a{
+    color:#0ef;
+    text-decoration: none;
+    font-weight: 500;
+
+}
